@@ -1,5 +1,5 @@
-customer: list[dict] = [
-    {"name": "Kamil", "surname": "Kawa", "restauant": "McDonald"},
+users: list[dict] = [
+    {"name": "Kamil", "surname": "Kawa", "restaurant": "McDonald"},
     {"name": "Grzegorz", "surname": "Raz","restaurant": "KFC"}
 
 ]
@@ -11,6 +11,6 @@ employee: list[dict] = [
 
 company: list[dict] = [
     {"name": "McDonald", "customers": "4"},
-        {"name": "KFC", "customers": "2"}
+    {"name": "KFC", "customers": "2"}
 ]
 

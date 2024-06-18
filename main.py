@@ -1,5 +1,5 @@
-from models.data import customer
-from utils.crud import show_custmer
+from models.data import users, employee, company
+from utils.crud import show_user, add_new_user, delete_user, edit_user
 
 def login():
     print("logowanie")
@@ -14,7 +14,25 @@ def login():
 login()
 
 if __name__ == "__main__":
-    print("witaj użytkowniku")
-    while True:
-        print("Menu:")
-        break
+    if login():
+        while True:
+            print("Menu:")
+            print("1. Pokaż użytkownikow")
+            print("2. dodaj nowego użytkownika")
+            print("3. Usuń użytkownika")
+            print("4. uaktualnij użytkownika")
+
+
+            menu_option: str = input("Menu:")
+            if menu_option == "1":
+                print("Użytownicy: ")
+                show_user(users)
+            if menu_option == "2":
+                print("Dodaj użytkownika: ")
+                add_new_user(users)
+            if menu_option == "3":
+                print("Kogo usunac: ")
+                delete_user(users)
+            if menu_option == "4":
+                print("Kogo uaktualnic: ")
+                edit_user(users)

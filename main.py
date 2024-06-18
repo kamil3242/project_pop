@@ -1,5 +1,7 @@
-from models.data import users, employee, company
-from utils.crud import show_user, add_new_user, delete_user, edit_user
+from models.data import users, employees, companies
+from utils.crud import show_user, add_new_user, delete_user, edit_user, show_company, delete_company, add_company, \
+    update_company
+
 
 def login():
     print("logowanie")
@@ -11,6 +13,8 @@ def login():
     else:
         print("nie zalogowano")
         return False
+
+
 login()
 
 if __name__ == "__main__":
@@ -21,7 +25,10 @@ if __name__ == "__main__":
             print("2. dodaj nowego użytkownika")
             print("3. Usuń użytkownika")
             print("4. uaktualnij użytkownika")
-
+            print("5. pokaz restauracje fast-food")
+            print("6. dodaj nowa restauracje fast-food")
+            print("7. usun restauracje fast-food")
+            print("8. uaktualnij restauracje fast-food")
 
             menu_option: str = input("Menu:")
             if menu_option == "1":
@@ -36,3 +43,15 @@ if __name__ == "__main__":
             if menu_option == "4":
                 print("Kogo uaktualnic: ")
                 edit_user(users)
+            if menu_option == "5":
+                print("Kogo restauracje fast-food: ")
+                show_company(companies)
+            if menu_option == "6":
+                print("Dodaj restauracje fast-food: ")
+                add_company(companies)
+            if menu_option == "7":
+                print("Usun restauracje fast-food: ")
+                delete_company(companies)
+            if menu_option == "8":
+                print("uaktualnij restauracje fast-food: ")
+                update_company(companies)

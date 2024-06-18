@@ -57,3 +57,33 @@ def update_company(companies: list) -> None:
             company['name'] = input("Restauracja fast-food: ")
             company['customers'] = input("ilosc klientow: ")
             companies.append(company)
+
+
+def show_employees(employees_list: list[dict]) -> None:
+    for employee in employees_list:
+        print(f"{employee['name']} {employee['surname']}, Restauracja: {employee['restaurant']}")
+
+
+def add_employee(employees: list) -> None:
+    employee_name = input("Imie: ")
+    employee_surname = input("Nazwisko: ")
+    employee_restaurant = input("Restauracja: ")
+    new_employees = {'name': employee_name, 'surname': employee_surname, 'restaurant': employee_restaurant}
+    employees.append(new_employees)
+
+
+def delete_employee(employees: list) -> None:
+    employee_name = input("Ktory pracownik: ")
+    for employee in employees:
+        if f"{employee['name']}" == employee_name:
+            employees.remove(employee)
+
+
+def update_employee(employees: list) -> None:
+    employee_name = input("Ktory pracownik: ")
+    for employee in employees:
+        if f"{employee['name']}" == employee_name:
+            employee['name'] = input("Imie: ")
+            employee['surname'] = input("Nazwisko: ")
+            employee['restaurant'] = input("Restauracja: ")
+            employees.append(employee)

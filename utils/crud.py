@@ -26,15 +26,31 @@ def edit_user(users: list) -> None:
             print(users)
             users.append(user)
 
+
 def show_company(companies_list: list[dict]) -> None:
     for company in companies_list:
-        print(f"{company['name']} klienci: {company['number users']}")
+        print(f"{company['name']}, klienci: {company['customers']}")
 
 
-
-def add_company(company: dict) -> None:
+def add_company(companies: list) -> None:
     company_name = input("Nazwa restauracji fast-food: ")
     company_users = input("ilosc klientow: ")
-    new_company = {"name": company_name, "number users": company_users}
+    new_company = {"Nazwa restauracji fast-food": company_name, "klienci": company_users}
     print(new_company)
-    company.update(new_company)
+    companies.append(new_company)
+
+
+def delete_company(companies: list) -> None:
+    company_name = input("Ktora restauracje fast-food usunac: ")
+    for company in companies:
+        if company['name'] == company_name:
+            companies.remove(company)
+
+
+def update_company(companies: list) -> None:
+    company_name = input("ktora restauracje fast-food uaktualnic: ")
+    for company in companies:
+        if company['name'] == company_name:
+            company['name'] = input("Restauracja fast-food: ")
+            company['customers'] = input("ilosc klientow: ")
+            companies.append(company)

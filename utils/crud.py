@@ -2,6 +2,7 @@ def show_user(users_list: list[dict]) -> None:
     for user in users_list:
         print(f"Imie: {user['name']} Nazwisko: {user['surname']}, Restauracja: {user['restaurant']}")
 
+
 def add_new_user(users: list) -> None:
     name = input("Imie: ")
     surname = input("Nazwisko: ")
@@ -10,11 +11,13 @@ def add_new_user(users: list) -> None:
     print(new_user)
     users.append(new_user)
 
+
 def delete_user(users: list) -> None:
     user_name = input("Kogo usunac?: ")
     for user in users:
         if f"{user['name']}" == user_name:
             users.remove(user)
+
 
 def edit_user(users: list) -> None:
     user_name = input("Kogo uaktualnic?: ")
@@ -54,3 +57,18 @@ def update_company(companies: list) -> None:
             company['name'] = input("Restauracja fast-food: ")
             company['customers'] = input("ilosc klientow: ")
             companies.append(company)
+
+
+def show_employees(employees_list: list[dict]) -> None:
+    for employee in employees_list:
+        print(f"Imie: {employee['name']}, Nazwisko: {employee['surname']}, Restauracja: {employee['restaurant']}")
+
+
+def add_employee(employees: list) -> None:
+    employee_name = input("Imie: ")
+    employee_surname = input("Nazwisko: ")
+    employee_restaurant = input("Restauracja: ")
+    new_employees = {"Imie: ": employee_name, "Nazwisko: ": employee_surname, "restauracja: ": employee_restaurant}
+    print(employees)
+    employees.append(new_employees)
+

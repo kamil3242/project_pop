@@ -64,6 +64,7 @@ def show_employees(employees_list: list[dict]) -> None:
         print(f"Imie: {employee['name']}, Nazwisko: {employee['surname']}, Restauracja: {employee['restaurant']}")
 
 
+
 def add_employee(employees: list) -> None:
     employee_name = input("Imie: ")
     employee_surname = input("Nazwisko: ")

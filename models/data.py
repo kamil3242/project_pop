@@ -1,18 +1,16 @@
 users: list[dict] = [
     {"name": "Kamil", "surname": "Kawa", "restaurant": "McDonald"},
-    {"name": "Grzegorz", "surname": "Raz", "restaurant": "KFC"},
-    {"name": "Marek", "surname": "Zeszyt", "restaurant": "KFC"}
+    {"name": "Grzegorz", "surname": "Raz","restaurant": "KFC"}
 
 ]
 
-employees: list[dict] = [
+employee: list[dict] = [
     {"name": "Alan", "surname": "Waza", "restaurant": "McDonald"},
-    {"name": "Wojtek", "surname": "Zraz", "restaurant": "KFC"},
-    {"name": "Rafal", "surname": "Mielony", "restaurant": "Burger"}
+    {"name": "Wojtek", "surname": "Zraz", "restaurant": "KFC"}
 ]
 
-companies: list[dict] = [
+company: list[dict] = [
     {"name": "McDonald", "customers": "4"},
-    {"name": "KFC", "customers": "2"},
-    {"name": "Burger", "customers": "7"}
+    {"name": "KFC", "customers": "2"}
 ]
+

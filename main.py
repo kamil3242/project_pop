@@ -1,7 +1,7 @@
 from models.data import users, employees, companies
 from utils.crud import (show_user, add_new_user, delete_user, edit_user,
                         show_company, add_company, delete_company, update_company,
-                        show_employees, add_employee, delete_employee)
+                        show_employees, add_employee, delete_employee, update_employee)
 
 
 def login():
@@ -30,6 +30,8 @@ if __name__ == "__main__":
             print("9. Pokaz pracownika")
             print("10. dodaj pracownka")
             print("11. usun pracownika")
+            print("12. uaktualnij pracownika")
+
 
 
             menu_option: str = input("Menu:")
@@ -63,6 +65,8 @@ if __name__ == "__main__":
                 add_employee(employees)
             if menu_option == "11":
                 delete_employee(employees)
+            if menu_option == "12":
+                update_employee(employees)
 
 
 

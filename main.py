@@ -19,4 +19,5 @@ if __name__ == "__main__":
     print("witaj użytkowniku")
     while True:
         print("Menu:")
+        break
         print("1. Login")

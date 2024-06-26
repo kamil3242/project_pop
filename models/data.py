@@ -1,8 +1,9 @@
 users: list[dict] = [
     {"name": "Kamil", "surname": "Kawa", "restaurant": "McDonald"},
     {"name": "Grzegorz", "surname": "Raz", "restaurant": "KFC"},
-    {"name": "Marek", "surname": "Zeszyt", "restaurant": "KFC"}
-
+    {"name": "Piotr", "surname": "Myszka", "restaurant": "KFC"},
+    {"name": "Piotr", "surname": "Klawisz", "restaurant": "Burger"},
+    {"name": "Patryk", "surname": "Pad", "restaurant": "KFC"}
 ]
 
 employees: list[dict] = [

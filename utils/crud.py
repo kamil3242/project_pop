@@ -87,3 +87,21 @@ def update_employee(employees: list) -> None:
             employee['surname'] = input("Nazwisko: ")
             employee['restaurant'] = input("Restauracja: ")
             employees.append(employee)
+
+
+def company_user(companies: list[dict], users: list[dict]) -> None:
+    company_name = input("podaj nazwę resrauracji fast-food: ")
+    for company in companies:
+        if company_name == company['name']:
+            for user in users:
+                if user['restaurant'] == company_name:
+                    print(f"{user['name']}")
+
+
+def company_employess(companies: list[dict], employees: list[dict]) -> None:
+    company_name = input("podaj nazwę resrauracji fast-food: ")
+    for company in companies:
+        if company_name == company['name']:
+            for user in employees:
+                if user['restaurant'] == company_name:
+                    print(f"{user['name']}")

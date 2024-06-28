@@ -135,3 +135,34 @@ def map_users(users):
                       icon=folium.Icon(color='yellow')).add_to(map)
 
     map.save('models/maps/map_companies.html')
+
+
+def map_employees(employees):
+    map = folium.Map(location=[52, 20], zoom_start=6)
+    for employee in employees:
+        url = (f"https://pl.wikipedia.org/wiki/{employee['location']}")
+        response = requests.get(url)
+        response_html = BeautifulSoup(response.text, 'html.parser')
+        longitude = float(response_html.select('.longitude')[1].text.replace(',', '.'))
+        latitude = float(response_html.select('.latitude')[1].text.replace(',', '.'))
+        print(longitude, latitude)
+        folium.Marker(location=[latitude, longitude],
+                      popup=f"{employee['name']},\n{employee['location']}",
+                      icon=folium.Icon(color='blue')).add_to(map)
+
+    map.save('models/maps/map_companies.html')
+
+def map_company(companies):
+    map = folium.Map(location=[52, 20], zoom_start=6)
+    for company in companies:
+        url = (f"https://pl.wikipedia.org/wiki/{company['location']}")
+        response = requests.get(url)
+        response_html = BeautifulSoup(response.text, 'html.parser')
+        longitude = float(response_html.select('.longitude')[1].text.replace(',', '.'))
+        latitude = float(response_html.select('.latitude')[1].text.replace(',', '.'))
+        print(longitude, latitude)
+        folium.Marker(location=[latitude, longitude],
+                      popup=f"{company['name']},\n{company['location']}",
+                      icon=folium.Icon(color='yellow')).add_to(map)
+
+    map.save('models/maps/map_companies.html')

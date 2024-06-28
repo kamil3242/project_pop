@@ -34,23 +34,26 @@ if __name__ == "__main__":
                 print("4. uaktualnij użytkownika")
                 menu_option: str = input("Menu klientow: ")
                 if menu_option == "1":
-                    print("Użytownicy: ")
                     show_user(users)
                 if menu_option == "2":
-                    print("Dodaj użytkownika: ")
                     add_new_user(users)
                 if menu_option == "3":
-                    print("Kogo usunac: ")
                     delete_user(users)
                 if menu_option == "4":
-                    print("Kogo uaktualnic: ")
                     edit_user(users)
             if menu_option == "2":
                 print("1. Pokaz pracownika")
                 print("2. dodaj pracownka")
                 print("3. usun pracownika")
                 print("4. uaktualnij pracownika")
-
+                if menu_option == "1":
+                    show_employees(employees)
+                if menu_option == "2":
+                    add_employee(employees)
+                if menu_option == "3":
+                    delete_employee(employees)
+                if menu_option == "4":
+                    update_employee(employees)
             if menu_option == "3":
                 print("1. Pokaż restauracje fast-food")
                 print("2. Dodaj nowe restauracje fast-food")
@@ -58,28 +61,15 @@ if __name__ == "__main__":
                 print("4. uaktualnij restauracje fast-food")
                 print("5. pokaz kilentow restauracji")
                 print("6. pokaz pracownikow restauracji")
-
-            if menu_option == "5":
-                print("Kogo restauracje fast-food: ")
-                show_company(companies)
-            if menu_option == "6":
-                print("Dodaj restauracje fast-food: ")
-                add_company(companies)
-            if menu_option == "7":
-                print("Usun restauracje fast-food: ")
-                delete_company(companies)
-            if menu_option == "8":
-                print("uaktualnij restauracje fast-food: ")
-                update_company(companies)
-            if menu_option == "9":
-                show_employees(employees)
-            if menu_option == "10":
-                add_employee(employees)
-            if menu_option == "11":
-                delete_employee(employees)
-            if menu_option == "12":
-                update_employee(employees)
-            if menu_option == "13":
-                company_user(companies, users)
-            if menu_option == "14":
-                company_employess(companies, employees)
+                if menu_option == "1":
+                    show_company(companies)
+                if menu_option == "2":
+                    add_company(companies)
+                if menu_option == "3":
+                    delete_company(companies)
+                if menu_option == "4":
+                    update_company(companies)
+                if menu_option == "5":
+                    company_user(companies, users)
+                if menu_option == "6":
+                    company_employess(companies, employees)

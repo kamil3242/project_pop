@@ -2,7 +2,7 @@ from models.data import users, employees, companies
 from utils.crud import (show_user, add_new_user, delete_user, edit_user,
                         show_company, add_company, delete_company, update_company,
                         show_employees, add_employee, delete_employee, update_employee,
-                        company_user, company_employess)
+                        company_user, company_employess, map_users)
 
 
 def login():
@@ -73,3 +73,7 @@ if __name__ == "__main__":
                     company_user(companies, users)
                 if menu_option == "6":
                     company_employess(companies, employees)
+            if menu_option == "4":
+                print("1. mapa klientow")
+                if menu_option == "1":
+                    map_users(users)

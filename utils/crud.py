@@ -132,9 +132,9 @@ def map_users(users):
         print(longitude, latitude)
         folium.Marker(location=[latitude, longitude],
                       popup=f"{user['name']},\n{user['location']}",
-                      icon=folium.Icon(color='yellow')).add_to(map)
+                      icon=folium.Icon(color='grey')).add_to(map)
 
-    map.save('models/maps/map_companies.html')
+    map.save('models/map/map_companies.html')
 
 
 def map_employees(employees):
@@ -150,7 +150,8 @@ def map_employees(employees):
                       popup=f"{employee['name']},\n{employee['location']}",
                       icon=folium.Icon(color='blue')).add_to(map)
 
-    map.save('models/maps/map_companies.html')
+    map.save('models/map/map_companies.html')
+
 
 def map_company(companies):
     map = folium.Map(location=[52, 20], zoom_start=6)
@@ -163,6 +164,6 @@ def map_company(companies):
         print(longitude, latitude)
         folium.Marker(location=[latitude, longitude],
                       popup=f"{company['name']},\n{company['location']}",
-                      icon=folium.Icon(color='yellow')).add_to(map)
+                      icon=folium.Icon(color='darkpurple')).add_to(map)
 
-    map.save('models/maps/map_companies.html')
+    map.save('models/map/map_companies.html')

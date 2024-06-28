@@ -28,11 +28,14 @@ if __name__ == "__main__":
 
             menu_option: str = input("Menu:")
             if menu_option == "1":
+                print("0. zakoncz program")
                 print("1. Pokaż użytkownikow")
                 print("2. dodaj nowego użytkownika")
                 print("3. Usuń użytkownika")
                 print("4. uaktualnij użytkownika")
                 menu_option: str = input("Menu klientow: ")
+                if menu_option == "0":
+                    break
                 if menu_option == "1":
                     show_user(users)
                 if menu_option == "2":
@@ -42,10 +45,14 @@ if __name__ == "__main__":
                 if menu_option == "4":
                     edit_user(users)
             if menu_option == "2":
+                print("0. zakoncz program")
                 print("1. Pokaz pracownika")
                 print("2. dodaj pracownka")
                 print("3. usun pracownika")
                 print("4. uaktualnij pracownika")
+                menu_option: str = input("Menu pracownikow: ")
+                if menu_option == "0":
+                    break
                 if menu_option == "1":
                     show_employees(employees)
                 if menu_option == "2":
@@ -55,12 +62,16 @@ if __name__ == "__main__":
                 if menu_option == "4":
                     update_employee(employees)
             if menu_option == "3":
+                print("0. zakoncz program")
                 print("1. Pokaż restauracje fast-food")
                 print("2. Dodaj nowe restauracje fast-food")
                 print("3. usuń restauracje fast-food")
                 print("4. uaktualnij restauracje fast-food")
                 print("5. pokaz kilentow restauracji")
                 print("6. pokaz pracownikow restauracji")
+                menu_option: str = input("Menu restauracji: ")
+                if menu_option == "0":
+                    break
                 if menu_option == "1":
                     show_company(companies)
                 if menu_option == "2":
@@ -74,9 +85,13 @@ if __name__ == "__main__":
                 if menu_option == "6":
                     company_employess(companies, employees)
             if menu_option == "4":
+                print("0. zakoncz program")
                 print("1. mapa klientow")
                 print("2. mapa pracownikow")
                 print("3. mapa restauracji")
+                menu_option: str = input("Menu lokalizacji: ")
+                if menu_option == "0":
+                    break
                 if menu_option == "1":
                     map_users(users)
                 if menu_option == "2":
